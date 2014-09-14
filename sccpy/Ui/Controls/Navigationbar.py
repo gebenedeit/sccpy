@@ -1,5 +1,7 @@
 from PyQt4.QtGui import QWidget, QSizePolicy, QGridLayout
 from Ui.Colors import COLOR_WIDGET_3
+from Ui.Controls.Buttons.ButtonNavigation import ButtonNavigation
+from Ui.Helper import SetWidgetBackgroundColor
 
 class Navigationbar(QWidget):
     
@@ -9,9 +11,19 @@ class Navigationbar(QWidget):
         
     def __InitUi(self):
         self.setAutoFillBackground(True)
-        self.setStyleSheet("background-color: rgb("+str(COLOR_WIDGET_3[0])+","+str(COLOR_WIDGET_3[1])+","+str(COLOR_WIDGET_3[2])+");")
+        SetWidgetBackgroundColor(COLOR_WIDGET_3, self)
         self.__Layout = QGridLayout()
+        self.__Layout.setContentsMargins(0,0,0,0)
+        self.__Layout.setHorizontalSpacing(0)
+        self.__Layout.setVerticalSpacing(2)
         self.setLayout(self.__Layout)
+        
+        self.__btnHome = ButtonNavigation("Home")
+        self.__Layout.addWidget(self.__btnHome)
+        
+        self.__btnChat = ButtonNavigation("Chat")
+        self.__Layout.addWidget(self.__btnChat)
+        
         self.__wdgSpace = QWidget()
         self.__wdgSpace.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Preferred)
         self.__Layout.addWidget(self.__wdgSpace)
