@@ -27,4 +27,4 @@ class ButtonNavigation(QPushButton):
             "color: rgb("+str(COLOR_FONT_7[0])+","+str(COLOR_FONT_7[1])+","+str(COLOR_FONT_7[2])+"); "
             "font-size: 30px; "
             "outline: 0;}"
-            );
+            )
