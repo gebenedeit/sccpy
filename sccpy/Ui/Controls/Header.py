@@ -28,7 +28,7 @@ class Header(QWidget):
         self.__Layout.addWidget(self.__lblTitle,0,1,1,1)
         self.__Layout.addWidget(self.__wdgSpace,0,2,1,1)
         self.__Layout.addWidget(self.__chkExit,0,3,1,1)
-        self.__Layout.addWidget(self.__lblSubtitle,1,1,1,1)
+        self.__Layout.addWidget(self.__lblSubtitle,1,1,1,3)
         self.setLayout(self.__Layout)
         self.__chkExit.setChecked(True)
         
